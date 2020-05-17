@@ -1,0 +1,427 @@
+html  {
+    background-color: #E3E3E3;
+    scroll-behavior: smooth; /* Type de défilement */
+}
+
+/*Style général*/
+body {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%); /* Faire une bordure multicolore */
+  border-image-slice: 2;
+  width: 760px;
+  margin: 20px auto 20px; /* Centré et avoir une "marge" en haut et en bas*/
+  padding: 15px; /* Evite les dépassement */
+  box-shadow: 0 0 15px 5px #B3B3B3;
+  background: #CFECEA;
+  font-family: 'calibri', 'comic sans ms', serif;
+}
+
+
+/* Style pour la bannière */
+.banner{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+
+/*Style pour la barre de navigation*/
+.navigation{
+  height: 130px;
+  width: 790px;
+  position: relative;
+  margin: auto;
+  perspective: 2000px;
+  padding: 0px 15px 2px;
+  margin: 0px -30px 20px;
+}
+
+/*Style pour case de barre de navigation*/
+.item{
+  float: left;
+  height: 130px;
+  width: 158px;
+  transform-style: preserve-3d;
+  border-top: solid;
+  border-bottom: solid;
+
+}
+
+/* Style pour les deux faces de chaque case de barre de navigation */
+.front, .back{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+
+/* Style pour la première case */
+.item:nth-child(1)>div{ /*nth-child() permet de sélectionner le nème item*/
+  background-color: #5FB3F9;
+
+}
+#case1{
+  border-top-color: #2265F9;
+  border-bottom-color: #2265F9;
+}
+
+
+/* Style pour la deuxième case */
+.item:nth-child(2)>div{
+  background-color: #60EAD3;
+
+}
+#case2{
+  border-top-color: #14947E;
+  border-bottom-color: #14947E;
+}
+
+
+/* Style pour la troisième case */
+.item:nth-child(3)>div{
+  background-color: #FDA660;
+}
+#case3{
+  border-top-color: #DE800B;
+  border-bottom-color: #DE800B;
+}
+
+
+/* Style pour la quatrième case */
+.item:nth-child(4)>div{
+  background-color: #FD7B87;
+}
+#case4{
+  border-top-color: #FD2039;
+  border-bottom-color: #FD2039;
+}
+
+
+/* Style pour la cinquième case */
+.item:nth-child(5)>div{
+  background-color: #93c167;
+}
+#case5{
+  border-top-color: #549F06;
+  border-bottom-color: #549F06;
+}
+
+
+/* Style pour la face arrière des cases de navigation */
+.back{
+  position: relative;
+  transform: rotateY(180deg);
+  bottom: 130px;
+}
+
+/* Style pour le 'lien' de la face arrière des cases de navigation */
+.back>a {
+  text-align: center;
+  font-size: 18px;
+  text-shadow: 1px 1px black;
+  font-weight: bold;
+  text-decoration: none;  /* Enlève de soulignement des 'links' */
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  transition: 0.8s background-color; /* Temps de transition */
+}
+
+/* Style pour les logos */
+.logo{
+  width: 80px;
+  filter: invert(100%); /* Inverser les couleurs, le logo de base est noir.*/
+}
+
+
+/*Animation : Flipper */
+.item:hover{
+  transform: rotateY(180deg);
+  transition: 0.8s;
+}
+/*-- https://css-snippets.com/simple-horizontal-navigation/*/
+
+
+/* Style pour h1 */
+h1 {
+  text-transform: uppercase;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color: black;
+  padding: 5px 15px 2px;
+  margin: 0 -15px 20px;
+  }
+
+/*Style pour le h2*/
+h2 {
+  font-size: 1.1em;
+  text-align: center;
+  padding: 5px 0;
+  margin: 20px 40px 5px;
+  overflow: hidden; /* Tout ce qui dépasse est caché */
+  border-width: 2px 0;
+  border-bottom: solid;
+  text-transform: uppercase;
+}
+
+/* Style pour les paragraphes */
+p{
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: justify;  /* Alignement gauche droite */
+}
+
+/* Style pour section Prepa-CESS */
+.prepa {
+  padding: 0px 15px 20px;
+  margin: 0 -15px -10px;
+  background-color: #C9E2F9;
+}
+.prepa #accueil{
+  background-color: #5fB3f9;
+}
+
+/* Style pour section Modalités */
+.modalites-section{
+  padding: 0px 15px 20px;
+  margin: 0 -15px -10px;
+  background-color: #DBFFFA;
+}
+#modalites{
+  background-color: #60ead3; /* Fond h1 */
+}
+.modalites-section h2{
+  border-color: rgba(20, 148, 126, 0.5); /* Couleur barre inférieur h2 */
+}
+.modalites-h2{
+  color: rgba(20, 148, 126);  /* Couleur police h2 */
+}
+
+/* Style pour les listes */
+dt{
+  font-weight: bold;
+  text-align: justify;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+dd{
+  text-align: justify;
+  margin-left: 70px;
+  margin-right: 40px;
+}
+#option{
+  margin-top: -5px;
+}
+
+/* Style pour section Cours */
+.cours{
+  padding: 0px 15px 20px;
+  margin: 0 -15px -10px;
+  background-color: #FDEEE3;
+}
+#cours{
+  background-color: #FDA660;
+}
+
+/* Style pour tableau */
+table {
+  border: 3px solid #FDA660;
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  column-width: 80px;
+}
+caption {
+  caption-side: bottom;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 0.8em;
+}
+thead, tfoot {
+  border: 1px solid #FDA660;
+}
+tbody {
+  background-color: #FDF8F2;
+  border: 1px solid #FDA323;
+}
+th {
+  border: 1px dashed #FD5B0F;
+  padding: 5px;
+  background-color: #FDA660;
+  width: 20%; /* Diviser équitablement le tableau en 5 parts égales */
+}
+td {
+  font-size: 90%;
+  border: 1px solid #FDA660;
+  padding: 5px;
+  text-align:center;
+}
+
+
+/*Style pour la section Contact*/
+.contact-section{
+  padding: 0px 15px 0px;
+  margin: 0 -15px 0px;
+  background-color: #FDDCDC;
+}
+#contact{
+  background-color: #fd7b87;
+}
+
+.contact-section h2{
+  border-color: rgba(253, 32, 57, 0.5);
+}
+#form{
+ color: rgba(253, 32, 57);  /* Couleur texte h2 */
+}
+
+/*Style cadre général pour le formulaire de contact */
+.container {
+ border-radius: 5px;
+ padding: 20px;
+ margin: auto;
+}
+
+.coord{
+  margin: auto; /* Tout le cadre avec légende soit centré */
+}
+legend{
+  font-style: italic;
+  font-size: 0.8em;
+  display: block;
+  margin: auto;
+}
+
+/* Style pour le formulaire */
+input[type=text], input[type=tel], input[type=email], select, textarea {
+  background-color: #FDF8F7;
+  width: 100%;
+  padding: 10px; /* hauteur de case */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Pour être sûr que la largeur et le padding ne dépassent pas */
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical /* élargir le sens vertical mais pas le sens horizontal de la zone message*/
+}
+
+/* Style pour les choix du genre femme/homme/autre*/
+.box{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+input[type=radio]{
+  margin-right: 30px; /* Avoir de l'espace entre chaque radio */
+}
+label[for=femme], label[for=homme], label[for=autre]{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.msg {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Zone de message */
+#msg-zone{
+  height: 200px;
+  width: 500px;
+  vertical-align: middle;
+  font-family: 'courier', serif;
+  font-size: 0.9em;
+}
+
+/* Style pour le bouton d'envoi */
+input[type=submit] {
+ background-color: #fd7b87;
+ color: black;
+ padding: 12px 20px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+}
+
+/* Quand le curseur se déplace sur le bouton, le bouton devient plus foncé */
+input[type=submit]:hover {
+ background-color: #CF656E;
+}
+
+#envoi{
+  margin-right: 110px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+
+/* Style pour les dons */
+.sidebar {
+  width: 30%;
+  float: right;
+  background-color: #CCFFCC;
+  padding: 20px 10px;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #93C167;
+  border-top-style: solid;
+  border-top-width: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+  margin-top: 90px;
+  margin-right: 40px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  border-style: hidden;
+  padding: 0;
+  margin-top: 0;
+  color: black;
+}
+
+.sidebar p{
+  margin: 10px 5px 5px;
+}
+
+/* Style trans-section */
+.modalites-section a, .contact-section a {  /* Style sur les liens*/
+  text-decoration: none; /* Enlève le soulignement */
+  font-weight: bold;
+}
+
+#champ, #note{
+  font-size: 70%; /* Les notes * */
+}
+
+/* Style notes de bas de page */
+.foot{
+  background-color: #A1A1A1;
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 5px 0;
+  margin: 0 -15px -15px;
+}
+
+/* Style pour le bouton "up" */
+.up{
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3px;
+  width: 20px;
+  height: 20px;
+  filter: invert(100%) opacity(70%);
+}
