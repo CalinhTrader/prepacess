@@ -299,6 +299,7 @@ legend{
   font-size: 0.8em;
   display: block;
   margin: auto;
+  border: 1px grey;
 }
 
 /* Style pour le formulaire */
