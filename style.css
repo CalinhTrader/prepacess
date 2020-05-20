@@ -281,6 +281,9 @@ td {
  padding: 20px;
  margin: auto;
 }
+#form1{
+  padding-bottom: 15px;
+}
 
 .coord{
   margin: auto; /* Tout le cadre avec légende soit centré */

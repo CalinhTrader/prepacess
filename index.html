@@ -297,7 +297,7 @@
         </p>
       </aside>
         <div class="container">
-          <form name="data" method="POST" data-netlify="true"> <!-- permet de recueillir les données via Netlify -->
+          <form id="form1" name="data" method="POST" data-netlify="true"> <!-- permet de recueillir les données via Netlify -->
             <fieldset class="coord" style="width: 50%">
               <legend>Coordonnées</legend>
 
@@ -348,9 +348,9 @@
                   <input type="reset" value="Réinitialiser" />
                   </div>
               </fieldset>
+          </form>
 
-              <br/>
-
+          <form name="datamessage" method="POST" data-netlify="true">
               <div class="msg">
                 <label for="msg-zone"> Message : <br/>
                   <textarea id="msg-zone" name="message1">Écris ton message ici.</textarea>
@@ -360,7 +360,6 @@
               <div id="envoi">
                 <input type="submit" value="Envoyer">
               </div>
-
           </form>
         </div>
     </section>
