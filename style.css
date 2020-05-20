@@ -34,20 +34,18 @@ body {
     position: relative;
     margin: auto;
     perspective: 2000px; /* Illusion que la carte de navigation est en 3D */
-    -webkit-transform-style: 2000px;
     padding: 0px 15px 2px;
     margin: 0px -30px 20px;
 }
 
 /*Style pour case de barre de navigation*/
 .item{
-    float: left;
-    height: 130px;
-    width: 158px;
-    transform-style: preserve-3d; /* Donner un effet 3D et non-aplati*/
-    -webkit-transform-style: preserve-3d; /* Sinon n'aurait pas le recto-verso */
-    border-top: solid;
-    border-bottom: solid;
+  float: left;
+  height: 130px;
+  width: 158px;
+  transform-style: preserve-3d; /* Donner un effet 3D et non-aplati sinon n'aurait pas le recto-verso*/
+  border-top: solid;
+  border-bottom: solid;
 }
 
 /* Style pour les deux faces de chaque case de barre de navigation */
