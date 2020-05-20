@@ -328,6 +328,24 @@ label[for=femme], label[for=homme], label[for=autre]{
   justify-content: center;
   text-align: center;
 }
+/* Style bouton reset */
+input[type=reset] {
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset]:hover {
+ background-color: #BBB;
+}
+#reset{
+  margin-left: 110px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
 /* Zone de message */
 #msg-zone{
@@ -352,6 +370,7 @@ input[type=submit] {
 input[type=submit]:hover {
  background-color: #CF656E;
 }
+
 
 #envoi{
   margin-right: 110px;

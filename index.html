@@ -324,7 +324,7 @@
                   <input type="email" id = "email" name="email1" placeholder="pierre.dupont@prepacess.be" required>
 
                   <label for="telephone">Téléphone : </label>
-                  <input type="tel" id="telephone" name="tel1" maxlength="13" pattern="[0-9]{4} [0-9]{2} [0-9]{2} [0-9]{2}" placeholder="Format : &quot;0412 34 56 78&quot;"">
+                  <input type="tel" id="telephone" name="tel1" maxlength="13" pattern="[0-9]{4} [0-9]{2} [0-9]{2} [0-9]{2}" placeholder="Format : &quot;0412 34 56 78&quot;">
                   <label for="objet"> Objet* :
                     <select id="objet" name="objet1">
 
@@ -342,6 +342,10 @@
 
                   <div id="champ">
                       *champs obligatoires.
+                  </div>
+
+                  <div id="reset">
+                  <input type="reset" value="Réinitialiser" />
                   </div>
               </fieldset>
 
@@ -364,7 +368,14 @@
   <footer class="foot">
     Copyright &#169; PREPA-CESS 2020 - Tout droit réservé
   </footer>
-
+    <script> /* Mise en forme automatique du numéro de téléphone */
+      document.getElementById("telephone").onkeyup = function() {telForm()};
+      function telForm() {
+          var x = document.getElementById("telephone");
+          x.value = x.value.replace(/\D/g,'');
+          x.value = x.value.substring(0, 4) + ' ' + x.value.substring(4, 6) + ' ' + x.value.substring(6, 8) + ' ' + x.value.substring(8, 10);
+      }
+    </script>
   </body>
 
 
