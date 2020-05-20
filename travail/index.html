@@ -347,10 +347,9 @@
                   <div id="reset">
                   <input type="reset" value="Réinitialiser" />
                   </div>
-              </fieldset>
-          </form>
 
-          <form name="datamessage" method="POST" data-netlify="true">
+              </fieldset>
+              <br>
               <div class="msg">
                 <label for="msg-zone"> Message : <br/>
                   <textarea id="msg-zone" name="message1">Écris ton message ici.</textarea>
@@ -367,14 +366,14 @@
   <footer class="foot">
     Copyright &#169; PREPA-CESS 2020 - Tout droit réservé
   </footer>
-    <script> /* Mise en forme automatique du numéro de téléphone */
-      document.getElementById("telephone").onkeyup = function() {telForm()};
-      function telForm() {
-          var x = document.getElementById("telephone");
-          x.value = x.value.replace(/\D/g,'');
-          x.value = x.value.substring(0, 4) + ' ' + x.value.substring(4, 6) + ' ' + x.value.substring(6, 8) + ' ' + x.value.substring(8, 10);
-      }
-    </script>
+  <script> /* Mise en forme automatique du numéro de téléphone */
+    document.getElementById("telephone").onkeyup = function() {telForm()};
+    function telForm() {
+        var x = document.getElementById("telephone");
+        x.value = x.value.replace(/\D/g,'');
+        x.value = x.value.substring(0, 4) + ' ' + x.value.substring(4, 6) + ' ' + x.value.substring(6, 8) + ' ' + x.value.substring(8, 10);
+    }
+  </script>
   </body>
 
 
