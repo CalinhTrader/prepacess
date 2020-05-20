@@ -5,71 +5,69 @@ html  {
 
 /*Style général*/
 body {
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-image: linear-gradient(to right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%); /* Faire une bordure multicolore, ceci ne fonctionne pas sur Safari */
-  border-image-slice: 1; /* Découpe de la région */
-  width: 760px;
-  margin: 20px auto 20px; /* Centré et avoir une "marge" en haut et en bas*/
-  padding: 15px; /* Evite les dépassement */
-  box-shadow: 0 0 15px 5px #B3B3B3;
-  background: #CFECEA;
-  font-family: 'calibri', 'comic sans ms', serif;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%); /* Faire une bordure multicolore, ceci ne fonctionne pas sur Safari */
+    border-image-slice: 1; /* Découpe de la région */
+    width: 760px;
+    margin: 20px auto 20px; /* Centré et avoir une "marge" en haut et en bas*/
+    padding: 15px; /* Evite les dépassement */
+    box-shadow: 0 0 15px 5px #B3B3B3;
+    background: #CFECEA;
+    font-family: 'calibri', 'comic sans ms', serif;
 }
 
 
 /* Style pour la bannière */
 .banner{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
 
 
 /*Style pour la barre de navigation*/
 .navigation{
-  height: 130px;
-  width: 790px;
-  position: relative;
-  margin: auto;
-  perspective: 2000px; /* Illusion que la carte de navigation est en 3D */
-  -webkit-transform-style: 2000px;
-  padding: 0px 15px 2px;
-  margin: 0px -30px 20px;
+    height: 130px;
+    width: 790px;
+    position: relative;
+    margin: auto;
+    perspective: 2000px; /* Illusion que la carte de navigation est en 3D */
+    -webkit-transform-style: 2000px;
+    padding: 0px 15px 2px;
+    margin: 0px -30px 20px;
 }
 
 /*Style pour case de barre de navigation*/
 .item{
-  float: left;
-  height: 130px;
-  width: 158px;
-  transform-style: preserve-3d; /* Donner un effet 3D et non-aplati*/
-  -webkit-transform-style: preserve-3d; /* Sinon n'aurait pas le recto-verso */
-  border-top: solid;
-  border-bottom: solid;
-
-
+    float: left;
+    height: 130px;
+    width: 158px;
+    transform-style: preserve-3d; /* Donner un effet 3D et non-aplati*/
+    -webkit-transform-style: preserve-3d; /* Sinon n'aurait pas le recto-verso */
+    border-top: solid;
+    border-bottom: solid;
 }
 
 /* Style pour les deux faces de chaque case de barre de navigation */
 .front, .back{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backface-visibility: hidden; /* Rendre invisible l'autre face */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden; /* Rendre invisible l'autre face */
 }
 
 
 /* Style pour la première case */
 .item:nth-child(1)>div{ /*nth-child() permet de sélectionner le nème item*/
-  background-color: #5FB3F9;
+    background-color: #5FB3F9;
 }
 #case1{
-  border-top-color: #2265F9;
-  border-bottom-color: #2265F9;
+    border-top-color: #2265F9;
+    border-bottom-color: #2265F9;
 }
 
 
@@ -416,10 +414,20 @@ input[type=submit]:hover {
 
 /* Style pour le bouton "up" qui se situe dans la zone h1 */
 .up{
-  float: right;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    filter: invert(100%) opacity(70%);
+} /*
+overflow: auto;
+float: right;
+float: right;
   display: flex;
+  display:  inline-flex;
   justify-content: flex-end;
-  width: 3%;
-  height: 3%;
-  filter: invert(100%) opacity(70%);
-}
+  align-items: center;
+  https://www.w3schools.com/css/css_align.asp
+  vertical-align: middle;*/
