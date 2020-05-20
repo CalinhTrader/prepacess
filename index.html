@@ -364,14 +364,14 @@
   <footer class="foot">
     Copyright &#169; PREPA-CESS 2020 - Tout droit réservé
   </footer>
-  <script>
-    document.getElementById("telephone").onkeyup = function() {telForm()};
-    function telForm() {
-      var x = document.getElementById("telephone");
-      x.value = x.value.replace(/\D/g,'');
-      x.value = x.value.substring(0, 4) + ' ' + x.value.substring(4, 6) + ' ' + x.value.substring(6, 8) + ' ' + x.value.substring(8, 10);
-  }
-  </script>
+    <script>
+        document.getElementById("telephone").onkeyup = function() {telForm()};
+        function telForm() {
+            var x = document.getElementById("telephone");
+            x.value = x.value.replace(/\D/g,'');
+            x.value = x.value.substring(0, 4) + ' ' + x.value.substring(4, 6) + ' ' + x.value.substring(6, 8) + ' ' + x.value.substring(8, 10);
+        }
+    </script>
   </body>
 
 

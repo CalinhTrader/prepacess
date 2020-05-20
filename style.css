@@ -147,14 +147,15 @@ body {
 
 /* Style pour h1 */
 h1 {
-  text-transform: uppercase;
-  font-size: 150%;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 1px;
-  color: black;
-  padding: 5px 15px 2px;
-  margin: 0 -15px 20px;
+
+    text-transform: uppercase;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    color: black;
+    padding: 5px 15px 2px;
+    margin: 0 -15px 20px;
   }
 
 /*Style pour le h2*/
@@ -415,19 +416,8 @@ input[type=submit]:hover {
 /* Style pour le bouton "up" qui se situe dans la zone h1 */
 .up{
     float: right;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 3px;
+    margin-top: 3px; /* par défaut float est top-align, donc je descends pour le centrer */
     width: 20px;
     height: 20px;
     filter: invert(100%) opacity(70%);
-} /*
-overflow: auto;
-float: right;
-float: right;
-  display: flex;
-  display:  inline-flex;
-  justify-content: flex-end;
-  align-items: center;
-  https://www.w3schools.com/css/css_align.asp
-  vertical-align: middle;*/
+}
